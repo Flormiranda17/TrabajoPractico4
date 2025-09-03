@@ -42,6 +42,11 @@ public class Materia {
     public void setAño(int año) {
         this.año = año;
     }
+
+    @Override
+    public String toString() {
+        return "Materia{" + "idMateria=" + idMateria + ", nombre=" + nombre + ", a\u00f1o=" + año + '}';
+    }
     
     
     
