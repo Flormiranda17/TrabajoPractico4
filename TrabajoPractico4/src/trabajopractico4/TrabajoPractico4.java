@@ -14,6 +14,10 @@ public class TrabajoPractico4 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+	Formulario form=new Formulario();
+        form.setVisible(true); //hace visible pantalla(interfaz)
+        form.setLocationRelativeTo(null); //centra pantalla
+
         // TODO code application logic here
         Materia m1=new Materia(1,"WEB",2);
         Materia m2=new Materia(2,"Matematica",1);
