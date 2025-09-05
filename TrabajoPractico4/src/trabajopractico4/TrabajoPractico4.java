@@ -4,6 +4,8 @@
  */
 package trabajopractico4;
 
+import trabajopractico4.interfaz.Formulario;
+
 /**
  *
  * @author Florencia
