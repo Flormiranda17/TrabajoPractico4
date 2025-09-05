@@ -1,18 +1,29 @@
 
 package trabajopractico4.interfaz;
 
+import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.String;
+import java.util.HashSet;
+import trabajopractico4.Alumno;
+
+
 /**
  *
  * @author Emiliano
  */
 public class formularioAlumno extends javax.swing.JInternalFrame {
 
+    private final HashSet<Alumno> listaAlumnos;
+  
     /**
      * Creates new form formularioAlumno
      */
-    public formularioAlumno() {
-        initComponents();
-    }
+    
+    public formularioAlumno(HashSet<Alumno> listaAlumnos) {
+    this.listaAlumnos = listaAlumnos;
+    initComponents();
+}
+
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -43,6 +54,11 @@ public class formularioAlumno extends javax.swing.JInternalFrame {
         jLabel4.setText("NOMBRE:");
 
         btnGuardar1.setText("Guardar");
+        btnGuardar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardar1ActionPerformed(evt);
+            }
+        });
 
         btnNuevo1.setText("Nuevo");
         btnNuevo1.addActionListener(new java.awt.event.ActionListener() {
@@ -125,6 +141,16 @@ public class formularioAlumno extends javax.swing.JInternalFrame {
         txtNombre.setText("");
     }//GEN-LAST:event_btnNuevo1ActionPerformed
 
+    private void btnGuardar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar1ActionPerformed
+        // TODO add your handling code here:
+        int legajo=Integer.parseInt(txtLegajo.getText());
+                String apellido=txtApellido.getText();
+                String nombre =txtNombre.getText();
+                
+                Alumno a=new Alumno(legajo,apellido,nombre);
+                listaAlumnos.add(a);
+    }//GEN-LAST:event_btnGuardar1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGuardar1;
@@ -138,4 +164,6 @@ public class formularioAlumno extends javax.swing.JInternalFrame {
     private javax.swing.JTextField txtLegajo;
     private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
+
+    
 }

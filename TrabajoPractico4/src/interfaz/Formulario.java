@@ -4,12 +4,17 @@
  */
 package trabajopractico4.interfaz;
 
+import java.util.HashSet;
+import trabajopractico4.Alumno;
+import trabajopractico4.Materia;
+
 /**
  *
  * @author Emiliano
  */
 public class Formulario extends javax.swing.JFrame {
-
+ public static HashSet<Alumno> listaAlumnos = new HashSet<>();
+    public static HashSet<Materia> listaMaterias = new HashSet<>();
     /**
      * Creates new form Formulario
      */
@@ -128,7 +133,7 @@ public class Formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_itemSalirActionPerformed
 
     private void itemMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMateriaActionPerformed
-       formularioMaterias materia=new formularioMaterias();
+       formularioMaterias materia=new formularioMaterias(listaMaterias);
        materia.setVisible(true);
        escritorio.add(materia);
        escritorio.moveToFront(materia);
@@ -142,7 +147,7 @@ public class Formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_itemInscrpcionActionPerformed
 
     private void itemAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAlumnoActionPerformed
-       formularioAlumno alumno=new formularioAlumno();
+       formularioAlumno alumno=new formularioAlumno(listaAlumnos);
        alumno.setVisible(true);
        escritorio.add(alumno);
        escritorio.moveToFront(alumno);

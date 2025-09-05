@@ -10,7 +10,7 @@ import trabajopractico4.interfaz.Formulario;
  *
  * @author Florencia
  */
-public class TrabajoPractico4 {
+public class Colegio {
 
     /**
      * @param args the command line arguments
