@@ -140,7 +140,7 @@ public class Formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_itemMateriaActionPerformed
 
     private void itemInscrpcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemInscrpcionActionPerformed
-       formularioInscripcion inscripcion=new formularioInscripcion();
+       formularioInscripcion inscripcion = new formularioInscripcion(listaAlumnos, listaMaterias);
        inscripcion.setVisible(true);
        escritorio.add(inscripcion);
        escritorio.moveToFront(inscripcion);

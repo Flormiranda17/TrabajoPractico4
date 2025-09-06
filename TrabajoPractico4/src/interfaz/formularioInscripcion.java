@@ -4,17 +4,39 @@
  */
 package trabajopractico4.interfaz;
 
+import java.util.HashSet;
+import trabajopractico4.Alumno;
+import trabajopractico4.Materia;
+
 /**
  *
  * @author Emiliano
  */
 public class formularioInscripcion extends javax.swing.JInternalFrame {
-
+ HashSet <Alumno>listaAlumnos;
+ HashSet <Materia>listaMateria;
     /**
      * Creates new form formularioInscripcion
      */
-    public formularioInscripcion() {
+    public formularioInscripcion(HashSet<Alumno>listaAlumnos,HashSet<Materia>listaMateria) {
+      
         initComponents();
+        this.listaAlumnos=listaAlumnos;
+        this.listaMateria=listaMateria;
+        llenarCombos();
+    }
+
+   
+    public void llenarCombos(){
+    cboxMateria.removeAllItems();
+    cboxAlumno.removeAllItems();
+    
+    
+    
+
+    
+    
+    
     }
 
     /**
@@ -38,7 +60,6 @@ public class formularioInscripcion extends javax.swing.JInternalFrame {
 
         jLabel2.setText("ELIJA UNA MATERIA:");
 
-        cboxMateria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cboxMateria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cboxMateriaActionPerformed(evt);
@@ -46,8 +67,6 @@ public class formularioInscripcion extends javax.swing.JInternalFrame {
         });
 
         jLabel3.setText("ELIJA UN ALUMNO:");
-
-        cboxAlumno.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         btnSalir3.setText("Salir");
         btnSalir3.addActionListener(new java.awt.event.ActionListener() {
@@ -119,8 +138,8 @@ public class formularioInscripcion extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnInscribir;
     private javax.swing.JButton btnSalir3;
-    private javax.swing.JComboBox<String> cboxAlumno;
-    private javax.swing.JComboBox<String> cboxMateria;
+    private javax.swing.JComboBox<Alumno> cboxAlumno;
+    private javax.swing.JComboBox<Materia> cboxMateria;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
