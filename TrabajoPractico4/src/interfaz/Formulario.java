@@ -44,6 +44,9 @@ public class Formulario extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        escritorio.setBackground(new java.awt.Color(51, 51, 255));
+        escritorio.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+
         javax.swing.GroupLayout escritorioLayout = new javax.swing.GroupLayout(escritorio);
         escritorio.setLayout(escritorioLayout);
         escritorioLayout.setHorizontalGroup(
@@ -133,21 +136,21 @@ public class Formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_itemSalirActionPerformed
 
     private void itemMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemMateriaActionPerformed
-       formularioMaterias materia=new formularioMaterias(listaMaterias);
+       formularioMaterias materia=new formularioMaterias();
        materia.setVisible(true);
        escritorio.add(materia);
        escritorio.moveToFront(materia);
     }//GEN-LAST:event_itemMateriaActionPerformed
 
     private void itemInscrpcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemInscrpcionActionPerformed
-       formularioInscripcion inscripcion = new formularioInscripcion(listaAlumnos, listaMaterias);
+       formularioInscripcion inscripcion = new formularioInscripcion();
        inscripcion.setVisible(true);
        escritorio.add(inscripcion);
        escritorio.moveToFront(inscripcion);
     }//GEN-LAST:event_itemInscrpcionActionPerformed
 
     private void itemAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAlumnoActionPerformed
-       formularioAlumno alumno=new formularioAlumno(listaAlumnos);
+       formularioAlumno alumno=new formularioAlumno();
        alumno.setVisible(true);
        escritorio.add(alumno);
        escritorio.moveToFront(alumno);

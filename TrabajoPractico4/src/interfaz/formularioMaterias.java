@@ -5,6 +5,7 @@
 package trabajopractico4.interfaz;
 
 import java.util.HashSet;
+import javax.swing.JOptionPane;
 import trabajopractico4.Materia;
 
 /**
@@ -12,12 +13,12 @@ import trabajopractico4.Materia;
  * @author Emiliano
  */
 public class formularioMaterias extends javax.swing.JInternalFrame {
-private final HashSet <Materia>listaMaterias;
+
     /**
      * Creates new form formularioMaterias
      */
-    public formularioMaterias(HashSet <Materia>listaMaterias) {
-        this.listaMaterias=listaMaterias;
+    public formularioMaterias() {
+      
         initComponents();
     }
 
@@ -147,13 +148,20 @@ private final HashSet <Materia>listaMaterias;
     }//GEN-LAST:event_btnNuevo2ActionPerformed
 
     private void btnGuardar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar2ActionPerformed
-        int codigo=Integer.parseInt(txtCodigo.getText());
+       try{ int codigo=Integer.parseInt(txtCodigo.getText());
+        
+        
         String nombre=txtMateria.getText();
+        if(nombre.isEmpty()){JOptionPane.showMessageDialog(this, "campo vacio");return;}
                 int año=Integer.parseInt(txtAño.getText());
                 
                 Materia m=new Materia(codigo,nombre,año);
-                
-        listaMaterias.add(m);
+       
+       Formulario.listaMaterias.add(m);
+      JOptionPane.showMessageDialog(this, "la materia "+ nombre +" esta anotada");
+        }catch(NumberFormatException e){JOptionPane.showMessageDialog(this, "ingrese un numero");}
+       
+       
     }//GEN-LAST:event_btnGuardar2ActionPerformed
 
 

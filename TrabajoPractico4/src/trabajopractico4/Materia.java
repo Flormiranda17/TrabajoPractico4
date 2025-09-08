@@ -44,9 +44,36 @@ public class Materia {
     }
 
     @Override
-    public String toString() {
-        return "Materia{" + "idMateria=" + idMateria + ", nombre=" + nombre + ", a\u00f1o=" + año + '}';
+    public int hashCode() {
+        int hash = 7;
+        return hash;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Materia other = (Materia) obj;
+        if (this.idMateria != other.idMateria) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return  "nombre=" + nombre + ", a\u00f1o=" + año  ;
+    }
+    
+
+  
     
     
     

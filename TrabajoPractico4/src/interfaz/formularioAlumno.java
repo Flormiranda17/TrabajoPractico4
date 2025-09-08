@@ -3,6 +3,7 @@ package trabajopractico4.interfaz;
 
 import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.String;
 import java.util.HashSet;
+import javax.swing.JOptionPane;
 import trabajopractico4.Alumno;
 
 
@@ -12,14 +13,14 @@ import trabajopractico4.Alumno;
  */
 public class formularioAlumno extends javax.swing.JInternalFrame {
 
-    private final HashSet<Alumno> listaAlumnos;
+   
   
     /**
      * Creates new form formularioAlumno
      */
     
-    public formularioAlumno(HashSet<Alumno> listaAlumnos) {
-    this.listaAlumnos = listaAlumnos;
+    public formularioAlumno() {
+   
     initComponents();
 }
 
@@ -142,13 +143,33 @@ public class formularioAlumno extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnNuevo1ActionPerformed
 
     private void btnGuardar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar1ActionPerformed
-        // TODO add your handling code here:
+       
+        try{// TODO add your handling code here:
         int legajo=Integer.parseInt(txtLegajo.getText());
+        
+             
+        
                 String apellido=txtApellido.getText();
-                String nombre =txtNombre.getText();
                 
-                Alumno a=new Alumno(legajo,apellido,nombre);
-                listaAlumnos.add(a);
+                
+                
+                String nombre =txtNombre.getText();
+        
+                
+               
+                
+                if(apellido.isEmpty()||nombre.isEmpty()){
+                JOptionPane.showMessageDialog(this, "Campo vacio");
+                return ;
+                };
+      Alumno a=new Alumno(legajo,apellido,nombre);
+      
+                Formulario.listaAlumnos.add(a); 
+                JOptionPane.showMessageDialog(this, "el alumno "+ nombre +" esta anotado");
+        }catch(NumberFormatException e){
+            JOptionPane.showMessageDialog(this, "ingrese un numero");}
+      
+        
     }//GEN-LAST:event_btnGuardar1ActionPerformed
 
 
