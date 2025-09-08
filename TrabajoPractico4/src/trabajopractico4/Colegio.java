@@ -25,7 +25,7 @@ public class Colegio {
         Materia m1 = new Materia(1, "WEB", 2);
         Materia m2 = new Materia(2, "Matematica", 1);
         Materia m3 = new Materia(3, "Laboratorio 1", 1);
-        Materia m4 = new Materia(3, "Laboratorio 1", 3);
+        Materia m4 = new Materia(3, "Laboratorio 1", 1);
 
         Alumno a1 = new Alumno(1001, "Lopez", "Martin");
         Alumno a2 = new Alumno(1002, "Martinez", "Brenda");
