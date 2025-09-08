@@ -46,10 +46,11 @@ public class Colegio {
 
         System.out.println("-------Listas de Materias del alumno Martinez Brenda-------");
         a2.listarMaterias();
-        System.out.println("Cantidad de materias inscriptas del alumno Martin Lopez");
         System.out.println("");
-
+        
+        System.out.println("Cantidad de materias inscriptas del alumno Martin Lopez");
         System.out.println(a1.cantidadMaterias());
+        
         System.out.println("Cantidad de materias inscriptas del alumno Martinez Brenda");
         System.out.println(a2.cantidadMaterias());
 
