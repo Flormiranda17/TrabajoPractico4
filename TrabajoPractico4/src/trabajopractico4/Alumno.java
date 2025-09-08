@@ -11,17 +11,17 @@ import java.util.HashSet;
  * @author Florencia
  */
 public class Alumno {
+
     private int legajo;
     private String apellido;
     private String nombre;
-    private HashSet <Materia>materias;
-    
+    private HashSet<Materia> materias;
 
     public Alumno(int legajo, String apellido, String nombre) {
         this.legajo = legajo;
         this.apellido = apellido;
         this.nombre = nombre;
-        this.materias=new HashSet <>();
+        this.materias = new HashSet<>();
     }
 
     public int getLegajo() {
@@ -55,7 +55,6 @@ public class Alumno {
     public void setMaterias(HashSet<Materia> materias) {
         this.materias = materias;
     }
-    
 
     @Override
     public int hashCode() {
@@ -78,46 +77,29 @@ public class Alumno {
         final Alumno other = (Alumno) obj;
         return this.legajo == other.legajo;
     }
-    
-    
-    
-    
-    public void agregarMateria (Materia m){
-             
-                        materias.add(m);
 
-            }
-        
-        
-        
-    
-    
-    public int cantidadMaterias (){
-       
-        return  materias.size();
-        
+    public void agregarMateria(Materia m) {
+
+        materias.add(m);
+
     }
 
-    
-    public void listarMaterias(){
-        for(Materia mm: materias){
+    public int cantidadMaterias() {
+
+        return materias.size();
+
+    }
+
+    public void listarMaterias() {
+        for (Materia mm : materias) {
             System.out.println(mm);
         }
-        
+
     }
 
     @Override
     public String toString() {
-        return  "apellido=" + apellido + ", nombre=" + nombre ;
+        return apellido + ", " + nombre + ", Legajo N°: " + legajo;
     }
-    
-   
-    
-    
 
-    
-    
-    
-    
-    
 }
