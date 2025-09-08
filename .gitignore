@@ -24,3 +24,27 @@ hs_err_pid*
 replay_pid*
 /TrabajoPractico4/build/
 /TrabajoPractico4/dist/
+
+# NetBeans files
+nbproject/private/
+build/
+dist/
+nbbuild/
+.nb-gradle/
+*.class
+*.log
+*.cache
+*.tmp
+*.swp
+
+# System files
+.DS_Store
+Thumbs.db
+
+# External libraries
+lib/
+*.jar
+
+# Compiler output
+out/
+target/

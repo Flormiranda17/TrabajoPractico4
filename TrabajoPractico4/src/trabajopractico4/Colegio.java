@@ -31,18 +31,6 @@ public class Colegio {
         Alumno a2 = new Alumno(1002, "Martinez", "Brenda");
         Alumno a3 = new Alumno(1002, "Martinez", "Brian");
 
-        HashSet<Alumno> listaalumnos = new HashSet();
-
-        listaalumnos.add(a1);
-        listaalumnos.add(a2);
-        listaalumnos.add(a3);
-
-        HashSet<Materia> listamaterias = new HashSet();
-
-        a1.agregarMateria(m1);
-        a1.agregarMateria(m2);
-        a1.agregarMateria(m3);
-
         a1.agregarMateria(m1);
         a1.agregarMateria(m2);
         a1.agregarMateria(m3);
@@ -51,18 +39,6 @@ public class Colegio {
         a2.agregarMateria(m2);
         a2.agregarMateria(m3);
         a2.agregarMateria(m3);
-
-        System.out.println("Lista total de alumnos: ");
-        for (Alumno alu : listaalumnos) {
-            System.out.println(alu);
-        }
-        System.out.println("");
-
-        System.out.println("Lista total de materias: ");
-        for (Materia mate : listamaterias) {
-            System.out.println(mate);
-        }
-        System.out.println("");
 
         System.out.println("-------Listas de Materias del alumno Martin Lopez-------");
         a1.listarMaterias();
